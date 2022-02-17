@@ -7,13 +7,11 @@ public class BubbleSort {
         for (int i = 0; i < array.length - 1; i++) {
             boolean swapped = false;
 
-            for (int j = 0; j < array.length - 1; j++) {
-                int val1 = array[j];
-                int val2 = array[j + 1];
-
-                if (val1 > val2) {
-                    array[j] = val2;
-                    array[j + 1] = val1;
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
 
                     swapped = true;
                 }
