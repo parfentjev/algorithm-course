@@ -1,5 +1,6 @@
-package chapter1;
+package chapters.chapter1;
 
+import chapters.chapter1.EuclidAlgorithm;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

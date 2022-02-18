@@ -1,4 +1,4 @@
-package chapter1;
+package chapters.chapter1;
 
 public class EuclidAlgorithm {
     public int findGreatestCommonDivider(int a, int b) {

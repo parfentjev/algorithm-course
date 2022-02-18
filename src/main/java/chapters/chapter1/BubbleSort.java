@@ -1,9 +1,12 @@
-package chapter1;
+package chapters.chapter1;
 
-import java.util.Arrays;
+import static utils.Utils.arrayUtils;
 
+/**
+ * Bubble sort is very inefficient, so never use it in a real program.
+ */
 public class BubbleSort {
-    public void sort(int[] array) {
+    public void sort(Integer[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             boolean swapped = false;
 
@@ -21,7 +24,6 @@ public class BubbleSort {
                 break;
         }
 
-        Arrays.stream(array).forEach(i -> System.out.print(i + " "));
-        System.out.println();
+        arrayUtils().print(array);
     }
 }
