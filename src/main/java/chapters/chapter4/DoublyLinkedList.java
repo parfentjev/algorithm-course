@@ -1,37 +1,30 @@
 package chapters.chapter4;
 
-public class LinkedList {
-    private Node head;
-
-    public Node getHead() {
-        return head;
-    }
+public class DoublyLinkedList {
+    private DoublyLinkedNode head;
 
     public void insertAtHead(int data) {
-        head = new Node(data, head);
+        DoublyLinkedNode newNode = new DoublyLinkedNode(data);
+        newNode.setNextNode(head);
+
+        if (head != null)
+            head.setPreviousNode(newNode);
+
+        head = newNode;
     }
 
-    public void deleteAtHead() {
-        head = head.getNextNode();
+    public void setHead(DoublyLinkedNode head) {
+        this.head = head;
     }
 
-    public Node findNode(int data) {
-        Node currentNode = head;
-
-        while (currentNode != null) {
-            if (currentNode.getData() == data)
-                return currentNode;
-
-            currentNode = currentNode.getNextNode();
-        }
-
-        return null;
+    public DoublyLinkedNode getHead() {
+        return head;
     }
 
     public int size() {
         int size = 0;
 
-        Node currentNode = head;
+        DoublyLinkedNode currentNode = head;
         while (currentNode != null) {
             size++;
             currentNode = currentNode.getNextNode();
@@ -43,7 +36,7 @@ public class LinkedList {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder().append("LinkedList{");
-        Node currentNode = head;
+        DoublyLinkedNode currentNode = head;
 
         while (currentNode != null) {
             stringBuilder.append(currentNode).append(currentNode.getNextNode() == null ? "" : ", ");

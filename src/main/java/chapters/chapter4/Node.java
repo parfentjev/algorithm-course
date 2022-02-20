@@ -1,7 +1,7 @@
 package chapters.chapter4;
 
 public class Node {
-    private int data;
+    private final int data;
     private Node nextNode;
 
     public Node(int data) {
@@ -15,10 +15,6 @@ public class Node {
 
     public int getData() {
         return data;
-    }
-
-    public void setData(int data) {
-        this.data = data;
     }
 
     public Node getNextNode() {
