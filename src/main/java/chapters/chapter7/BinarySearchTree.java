@@ -2,6 +2,9 @@ package chapters.chapter7;
 
 import java.util.StringJoiner;
 
+/**
+ * Binary search tree is fast, but only if it's balanced.
+ */
 public class BinarySearchTree {
     private TreeNode root;
 
